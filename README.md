@@ -1,6 +1,6 @@
 # ian-wb.github.io
 
-Personal portfolio site for Ian Wanderley — gameplay programmer.
+Personal portfolio site for Ian Wanderley — Unity gameplay programmer.
 
 **Live:** [ian-wb.github.io](https://ian-wb.github.io)
 
