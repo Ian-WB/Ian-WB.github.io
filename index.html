@@ -174,13 +174,15 @@
             <p class="project__meta">Unity 6 · Top-down co-op shooter · Team of 4 · 2025</p>
             <p>
               A 1–4 player local co-op wave-survival shooter, built in Unity 6
-              and shipped publicly on itch.io. I led programming — the player
-              controller, a data-driven weapon framework spanning five weapon
-              types, and a wave director that scales spawns to the player count
-              so co-op stays tense at any party size.
+              and shipped publicly on itch.io. As lead programmer I built the
+              player controller, a data-driven weapon framework (five weapons,
+              two fire modes, Pack-A-Punch upgrades), a perk system, the co-op
+              down-and-revive flow, and a Black Ops 2-style wave director that
+              scales zombie count, health, and ranged-enemy fraction to the
+              party size.
             </p>
             <ul class="tag-row">
-              <li>Unity 6</li><li>C#</li><li>Co-op</li><li>Weapons</li><li>Pooling</li><li>Wave system</li>
+              <li>Unity 6</li><li>C#</li><li>Co-op</li><li>Co-op revive</li><li>Weapons</li><li>Perks</li><li>Pooling</li><li>Wave system</li>
             </ul>
             <div class="project__links">
               <a href="https://ian-wb.itch.io/dark-side-of-horror" target="_blank" rel="noopener">Play the build →</a>
@@ -199,13 +201,15 @@
             <p class="project__meta">Unity · 3D Souls-style action-RPG · Team project · 2024</p>
             <p>
               A 3D action-RPG with Souls-style combat. I owned the player and
-              enemy state-machine architecture and built the lock-on system —
-              screen-space target selection wired into a Cinemachine TargetGroup,
-              the piece that makes Souls/Sekiro-style combat read correctly on
-              screen. NavMesh enemies and the inventory rounded out my work.
+              enemy state machines, an impact/knockback force layer that
+              integrates with NavMesh, and the lock-on system — viewport-space
+              target selection wired into a Cinemachine TargetGroup, the piece
+              that makes Souls/Sekiro combat read correctly on screen. NavMesh
+              enemies, a ledge-climb mechanic, and the inventory + equip system
+              rounded out my work.
             </p>
             <ul class="tag-row">
-              <li>Unity</li><li>C#</li><li>State machines</li><li>Lock-on</li><li>NavMesh</li><li>Cinemachine</li>
+              <li>Unity</li><li>C#</li><li>State machines</li><li>Lock-on</li><li>NavMesh</li><li>Cinemachine</li><li>Inventory</li><li>Ledge climb</li>
             </ul>
             <div class="project__links">
               <a href="https://www.youtube.com/watch?v=W-_Q3oEN8Sc" target="_blank" rel="noopener">Trailer →</a>
@@ -223,18 +227,19 @@
             <h3>Survival-Chaos</h3>
             <p class="project__meta">Unity · 3D orbital arena shooter · Team of 6 · 2023</p>
             <p>
-              A Resogun-inspired arena shooter where everything moves around the
-              surface of a cylinder. I co-led gameplay and built the orbital
-              coordinate system — one shared primitive the player, enemies, and
-              projectiles all move on — plus a three-phase boss with
-              independently timed attack patterns.
+              A Resogun-inspired arena shooter where every actor — player,
+              enemies, boss, and projectiles — orbits a shared scenario anchor,
+              so the whole arena reads as one coherent cylinder. I co-led
+              gameplay and built the orbital-motion convention plus a three-phase
+              boss with independently timed attack patterns and a laser phase
+              that toggles when the player enters a trigger zone.
             </p>
             <ul class="tag-row">
               <li>Unity</li><li>C#</li><li>Orbital motion</li><li>Projectiles</li><li>Boss</li>
             </ul>
             <div class="project__links">
               <a href="https://www.youtube.com/watch?v=Rumc7zpHOnQ" target="_blank" rel="noopener">Trailer →</a>
-              <a href="https://github.com/FFrade22/Survival-Chaos" target="_blank" rel="noopener">Source →</a>
+              <a href="https://github.com/Ian-WB/Survival-Chaos" target="_blank" rel="noopener">Source →</a>
             </div>
           </div>
         </article>
@@ -268,13 +273,15 @@
               project.
             </p>
             <ul class="tl-list">
-              <li>Built the player controller end to end — movement, rotation, Animator integration, and IK alignment.</li>
-              <li>Designed a data-driven weapon framework: five weapon types and two fire modes from shared ScriptableObject definitions.</li>
-              <li>Wrote a generic object pool reused for bullets, pickups, and VFX, removing runtime instantiation spikes.</li>
-              <li>Rebuilt the wave director with a player-count-aware spawn formula and a mid-match respawn flow.</li>
+              <li>Built the player controller end to end — movement, rotation, Animator integration, a stamina system (drain/regen/cooldown), and weapon-hand IK via Animation Rigging's TwoBoneIK constraint.</li>
+              <li>Designed a data-driven weapon framework — five weapon types (Pistol, BurstRifle, MiniGun, Shotgun, Sniper), two fire modes (Single, Auto), burst toggle, spread, and Pack-A-Punch upgrade tiers — all from shared ScriptableObject definitions.</li>
+              <li>Built the perk system end to end (perk machines, perk effects feeding back into movement and stats).</li>
+              <li>Built the co-op down-and-revive flow with multi-player input handoff on respawn.</li>
+              <li>Wrote a generic object pool keyed by prefab, reused for bullets, pickups, and VFX.</li>
+              <li>Rebuilt the wave director with a Black Ops 2-style zombie-count formula and health curve, ranged-enemy progression, per-zombie speed-tier distribution, and a mid-match respawn flow.</li>
             </ul>
             <ul class="tag-row">
-              <li>Unity 6</li><li>C#</li><li>Local co-op</li><li>Weapons</li><li>Pooling</li><li>Wave system</li>
+              <li>Unity 6</li><li>C#</li><li>Local co-op</li><li>Weapons</li><li>Co-op revive</li><li>Perks</li><li>Pooling</li><li>Wave system</li>
             </ul>
           </div>
         </div>
@@ -293,13 +300,15 @@
               system.
             </p>
             <ul class="tl-list">
-              <li>Built a hierarchical state machine for the player (FreeLook, Targeting, Jumping, Falling, Attacking) and enemies (Idle, Patrol, Chase, Attack, Impact, Dead).</li>
-              <li>Built lock-on targeting: viewport-space target selection integrated with a Cinemachine TargetGroup.</li>
+              <li>Built finite state machines for the player and enemies, sharing abstract base-state classes — six player states (FreeLook, Targeting, Jumping, Falling, Attacking, Hanging) and six enemy states (Idle, Patrol, Chase, Attack, Impact, Dead).</li>
+              <li>Built lock-on targeting — viewport-space target selection (closest to screen center) integrated with a Cinemachine TargetGroup.</li>
               <li>Implemented NavMesh-driven enemy pursuit — the agent computes the path, the CharacterController applies motion.</li>
-              <li>Built the inventory and item-collection system from scratch.</li>
+              <li>Built an impact/knockback force layer (ForceReceiver) that composes external forces with character motion and temporarily disables the NavMeshAgent during knockback to prevent path-fighting.</li>
+              <li>Built a ledge-climb mechanic (LedgeDetector + PlayerHangingState) layered onto the state machine.</li>
+              <li>Built the inventory + equip system (gameplay logic and UI) from scratch.</li>
             </ul>
             <ul class="tag-row">
-              <li>Unity</li><li>C#</li><li>State machines</li><li>Lock-on</li><li>NavMesh</li><li>Cinemachine</li>
+              <li>Unity</li><li>C#</li><li>State machines</li><li>Lock-on</li><li>NavMesh</li><li>Cinemachine</li><li>Inventory</li><li>Ledge climb</li>
             </ul>
           </div>
         </div>
@@ -317,9 +326,9 @@
               Co-led gameplay; owned the orbital motion model and the boss fight.
             </p>
             <ul class="tl-list">
-              <li>Built the orbital coordinate system as a shared primitive driving player, enemy, and projectile motion.</li>
-              <li>Built a three-phase boss with independently timed attack patterns and a toggle-driven laser phase.</li>
-              <li>Implemented enemy movement, four trigger-based collision handlers, and the damage/health flow.</li>
+              <li>Designed a consistent orbital-motion convention — every actor (player, enemies, boss, projectiles) rotates around a shared "Scenario" anchor via transform.RotateAround, so the whole arena reads as one coherent cylinder.</li>
+              <li>Built a three-phase boss with three independently timed attack patterns and a laser phase that toggles via a player-position trigger zone.</li>
+              <li>Implemented enemy movement, three trigger-based collision handlers (two flip orbital direction on contact; the third toggles the boss laser based on player position), and the damage/health flow.</li>
             </ul>
             <ul class="tag-row">
               <li>Unity</li><li>C#</li><li>Orbital motion</li><li>Projectiles</li><li>Boss</li>
