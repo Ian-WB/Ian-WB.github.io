@@ -114,7 +114,7 @@
           <li>Player controllers (3D and orbital)</li>
           <li>Character setup end-to-end (rig → Animator → IK)</li>
           <li>Weapons, damage, hit feedback</li>
-          <li>Hierarchical state machines</li>
+          <li>Finite state machines</li>
           <li>Lock-on targeting (viewport-space)</li>
           <li>NavMesh enemy AI</li>
         </ul>
@@ -126,28 +126,28 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
           <h4>Engine &amp; language</h4>
-          <p>Unity 6 · C# · the new Input System · URP · ScriptableObjects · Cinemachine · NavMesh</p>
+          <p>Unity 6 · C# · the new Input System · URP · ScriptableObjects · Cinemachine · NavMesh · Animation Rigging</p>
         </div>
         <div class="focus-card">
           <div class="focus-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/></svg>
           </div>
           <h4>Player &amp; character</h4>
-          <p>CharacterController movement · animator integration · IK · state machines · camera-relative locomotion</p>
+          <p>CharacterController movement · Animator integration · Two-Bone IK · finite state machines · camera-relative locomotion · stamina systems</p>
         </div>
         <div class="focus-card">
           <div class="focus-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
           </div>
           <h4>Combat &amp; enemies</h4>
-          <p>Data-driven weapons · projectiles · spread &amp; burst fire · lock-on targeting · multi-phase bosses</p>
+          <p>Data-driven weapons (ScriptableObjects) · spread &amp; burst fire · viewport-space lock-on · NavMesh-driven enemies · multi-phase bosses · co-op down/revive</p>
         </div>
         <div class="focus-card">
           <div class="focus-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v6H4z"/><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6H4z"/><path d="M14 14h6v6h-6z"/></svg>
           </div>
           <h4>Architecture</h4>
-          <p>Object pooling · event-driven glue · force composition · Cinemachine TargetGroup</p>
+          <p>Interface-driven design · event-driven gameplay · object pooling · force composition · Cinemachine TargetGroup</p>
         </div>
       </div>
     </div>
@@ -171,7 +171,7 @@
           </div>
           <div class="project__body">
             <h3>Dark Side of Horror</h3>
-            <p class="project__meta">Unity 6 · Top-down co-op shooter · Team of 4 · 2025</p>
+            <p class="project__meta">Unity 6 · Top-down co-op shooter · Team of 6 · 2025</p>
             <p>
               A 1–4 player local co-op wave-survival shooter, built in Unity 6
               and shipped publicly on itch.io. As lead programmer I built the
@@ -198,7 +198,7 @@
           </div>
           <div class="project__body">
             <h3>Feneco</h3>
-            <p class="project__meta">Unity · 3D Souls-style action-RPG · Team project · 2024</p>
+            <p class="project__meta">Unity · 3D Souls-style action-RPG · Team of 6 · 2024</p>
             <p>
               A 3D action-RPG with Souls-style combat. I owned the player and
               enemy state machines, an impact/knockback force layer that
@@ -266,7 +266,7 @@
             <p class="tl-meta">
               <span>Dark Side of Horror</span>
               <span>· 2025</span>
-              <span>· Team of 4</span>
+              <span>· Team of 6</span>
             </p>
             <p>
               Owned gameplay programming and the systems architecture across the
@@ -293,7 +293,7 @@
             <p class="tl-meta">
               <span>Feneco</span>
               <span>· 2024</span>
-              <span>· Team project</span>
+              <span>· Team of 6</span>
             </p>
             <p>
               Owned the state-machine architecture and the lock-on targeting
