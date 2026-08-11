@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ian Wanderley — Unity Gameplay Programmer</title>
-  <meta name="description" content="Ian Wanderley — Unity &amp; C# gameplay programmer from João Pessoa, Brazil. Lead programmer on a 4-player co-op shooter released publicly on itch.io; player controllers, animation, combat, and enemy AI across four team games." />
+  <title>Ian Wanderley · Unity Gameplay Programmer</title>
+  <meta name="description" content="Ian Wanderley: Unity &amp; C# gameplay programmer from João Pessoa, Brazil. Lead programmer on a 4-player co-op shooter released publicly on itch.io; player controllers, animation, combat, and enemy AI across four games." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
@@ -49,9 +49,9 @@
       </h1>
       <p class="hero__tagline">
         Unity &amp; C# gameplay programmer. I build the systems players feel
-        every frame — movement, animation, combat, enemy AI. Lead programmer
+        every frame: movement, animation, combat, enemy AI. Lead programmer
         on a co-op shooter released on itch.io, with core systems across three
-        more team games. João Pessoa, Brazil · open to entry-level roles.
+        more games. João Pessoa, Brazil · open to entry-level roles.
       </p>
       <div class="hero__cta">
         <a href="#projects" class="btn btn--primary">
@@ -83,8 +83,8 @@
       <h2 class="section__title">About <span class="grad">Ian</span></h2>
       <p class="section__lead">
         I'm Ian, a Unity gameplay programmer from João Pessoa, Brazil. Across
-        four team games at PUC Minas — the Tecnólogo em Jogos Digitais (Game
-        Development Associate Degree) — I owned player controllers, animation,
+        four games in the Tecnólogo em Jogos Digitais (Game Development
+        Associate Degree) at PUC Minas, I owned player controllers, animation,
         combat, enemy AI, and the architecture that holds them together. The
         most recent, Dark Side of Horror, was released publicly on itch.io
         with me as lead programmer.
@@ -96,7 +96,7 @@
           <p>
             Every project pulled me toward the same work: the systems a player
             touches every second. How a character moves and animates, how a
-            weapon answers the trigger, how an enemy decides to chase — and how
+            weapon answers the trigger, how an enemy decides to chase, and how
             those pieces stay clean enough to survive a semester of iteration.
             I like owning a system end to end, from the rough first pass to the
             version that finally feels right.
@@ -241,8 +241,8 @@
             <p class="project__meta">Gameplay Programmer · 2023</p>
             <p>
               A mobile 3D puzzle game woven from classic folktales. I built the
-              touch-driven player controller — tap-to-move across a multi-layer
-              grid — and the Sokoban block-pushing system.
+              touch-driven player controller (tap-to-move across a multi-layer
+              grid) and the Sokoban block-pushing system.
             </p>
             <p class="project__tech-label">Technologies Used:</p>
             <ul class="tag-row">
@@ -307,7 +307,7 @@
     <div class="section__inner">
       <h2 class="section__title reveal">Engineering <span class="grad">Breakdown</span></h2>
       <p class="section__lead reveal">
-        The same four games at engineering depth — the systems I designed, the
+        The same four games at engineering depth: the systems I designed, the
         decisions behind them, and the stack for each. Newest first.
       </p>
 
@@ -320,19 +320,18 @@
             <p class="tl-meta">
               <span>Dark Side of Horror</span>
               <span>· 2025</span>
-              <span>· Team of 6</span>
             </p>
             <p>
-              Owned gameplay programming and systems architecture end to end —
+              Owned gameplay programming and systems architecture end to end;
               everything below is live in the public itch.io build.
             </p>
             <ul class="tl-list">
               <li>Built the player controller end to end: movement, rotation, Animator integration, a stamina system (drain / regen / cooldown), and weapon-hand IK via Animation Rigging's TwoBoneIK constraint.</li>
-              <li>Designed a data-driven weapon framework — five weapon types (Pistol, BurstRifle, MiniGun, Shotgun, Sniper), two fire modes, burst toggle, spread, and Pack-A-Punch upgrade tiers — all from shared ScriptableObject definitions, so a new weapon is data, not code.</li>
+              <li>Designed a data-driven weapon framework: five weapon types (Pistol, BurstRifle, MiniGun, Shotgun, Sniper), two fire modes, burst toggle, spread, and Pack-A-Punch upgrade tiers, all from shared ScriptableObject definitions, so a new weapon is data, not code.</li>
               <li>Built the perk system: perk machines in the world, effects feeding back into movement and stats.</li>
               <li>Built the co-op down-and-revive flow, including multi-player input handoff on respawn.</li>
-              <li>Wrote a generic object pool keyed by prefab — bullets, pickups, and VFX reuse it, keeping dozens of actors on screen without instantiate/destroy churn.</li>
-              <li>Rebuilt the wave director around a Black Ops 2-style formula — zombie count and health curves, ranged-enemy progression, and per-zombie speed tiers, all scaling to party size — plus a mid-match respawn flow.</li>
+              <li>Wrote a generic object pool keyed by prefab; bullets, pickups, and VFX reuse it, keeping dozens of actors on screen without instantiate/destroy churn.</li>
+              <li>Rebuilt the wave director around a Black Ops 2-style formula: zombie count and health curves, ranged-enemy progression, and per-zombie speed tiers, all scaling to party size, plus a mid-match respawn flow.</li>
             </ul>
             <ul class="tag-row">
               <li>Unity 6</li><li>C#</li><li>Local co-op</li><li>Weapons</li><li>Co-op revive</li><li>Perks</li><li>Pooling</li><li>Wave system</li>
@@ -343,23 +342,22 @@
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-card">
-            <h3>Gameplay Programmer — state machines &amp; lock-on</h3>
+            <h3>Gameplay Programmer · state machines &amp; lock-on</h3>
             <p class="tl-meta">
               <span>Feneco</span>
               <span>· 2024</span>
-              <span>· Team of 6</span>
             </p>
             <p>
               Owned the state-machine architecture and the systems that make
               Souls-style combat read correctly on screen.
             </p>
             <ul class="tl-list">
-              <li>Built finite state machines for the player and enemies from shared abstract base states — six player states (FreeLook, Targeting, Jumping, Falling, Attacking, Hanging) and six enemy states (Idle, Patrol, Chase, Attack, Impact, Dead).</li>
+              <li>Built finite state machines for the player and enemies from shared abstract base states: six player states (FreeLook, Targeting, Jumping, Falling, Attacking, Hanging) and six enemy states (Idle, Patrol, Chase, Attack, Impact, Dead).</li>
               <li>Built lock-on targeting: viewport-space selection (closest to screen center) wired into a Cinemachine TargetGroup, so the camera frames both fighters the way the genre demands.</li>
-              <li>Implemented NavMesh-driven pursuit with a clean split of duties — the agent computes the path, the CharacterController applies the motion.</li>
+              <li>Implemented NavMesh-driven pursuit with a clean split of duties: the agent computes the path, the CharacterController applies the motion.</li>
               <li>Built ForceReceiver, an impact/knockback layer that composes external forces with character motion and disables the NavMeshAgent during knockback, so physics and pathfinding never fight.</li>
               <li>Layered a ledge-climb mechanic (LedgeDetector + PlayerHangingState) onto the state machine.</li>
-              <li>Built the inventory and equip system — gameplay logic and UI — from scratch.</li>
+              <li>Built the inventory and equip system (gameplay logic and UI) from scratch.</li>
             </ul>
             <ul class="tag-row">
               <li>Unity</li><li>C#</li><li>State machines</li><li>Lock-on</li><li>NavMesh</li><li>Cinemachine</li><li>Inventory</li><li>Ledge climb</li>
@@ -370,19 +368,18 @@
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-card">
-            <h3>Gameplay Programmer — touch controller &amp; Sokoban</h3>
+            <h3>Gameplay Programmer · touch controller &amp; Sokoban</h3>
             <p class="tl-meta">
               <span>Lost in Tales</span>
               <span>· 2023</span>
-              <span>· Team of 7</span>
             </p>
             <p>
               Owned the two systems the player touches most on this mobile
               folktale puzzler: the controller and the puzzle mechanic.
             </p>
             <ul class="tl-list">
-              <li>Built the touch-driven player controller — finger raycast to grid tile, tap-to-move via coroutine, multi-layer (height) navigation with climb and jump, and Animator integration (IsMoving / IsJumping / IsClimbing / IsPushing / IsHolding).</li>
-              <li>Built the Sokoban block-pushing system — selection, push/pull adjacency rules, collision rollback when a block can't move, and emissive feedback on the selected block.</li>
+              <li>Built the touch-driven player controller: finger raycast to grid tile, tap-to-move via coroutine, multi-layer (height) navigation with climb and jump, and Animator integration (IsMoving / IsJumping / IsClimbing / IsPushing / IsHolding).</li>
+              <li>Built the Sokoban block-pushing system: selection, push/pull adjacency rules, collision rollback when a block can't move, and emissive feedback on the selected block.</li>
             </ul>
             <ul class="tag-row">
               <li>Unity</li><li>C#</li><li>Mobile</li><li>Touch input</li><li>Grid navigation</li><li>Sokoban</li>
@@ -397,17 +394,16 @@
             <p class="tl-meta">
               <span>Survival-Chaos</span>
               <span>· 2023</span>
-              <span>· Team of 6</span>
             </p>
             <p>
               Owned the motion model the whole game runs on, plus the boss
               fight.
             </p>
             <ul class="tl-list">
-              <li>Designed the orbital-motion convention — every actor (player, enemies, boss, projectiles) rotates around a shared "Scenario" anchor via transform.RotateAround, so the whole arena reads as one coherent cylinder.</li>
+              <li>Designed the orbital-motion convention: every actor (player, enemies, boss, projectiles) rotates around a shared "Scenario" anchor via transform.RotateAround, so the whole arena reads as one coherent cylinder.</li>
               <li>Built a three-phase boss with independently timed attack patterns and a laser phase toggled by a player-position trigger zone.</li>
-              <li>Built the player's auto-fire and its upgrade tree — double, triple, rear, and sextuple shot patterns plus HP and attack-speed upgrades feeding the roguelite level-up loop.</li>
-              <li>Implemented enemy movement, the damage/health flow, and three trigger-based collision handlers — two flip orbital direction on contact; the third drives the boss laser.</li>
+              <li>Built the player's auto-fire and its upgrade tree: double, triple, rear, and sextuple shot patterns plus HP and attack-speed upgrades feeding the roguelite level-up loop.</li>
+              <li>Implemented enemy movement, the damage/health flow, and three trigger-based collision handlers: two flip orbital direction on contact; the third drives the boss laser.</li>
             </ul>
             <ul class="tag-row">
               <li>Unity</li><li>C#</li><li>Orbital motion</li><li>Projectiles</li><li>Boss</li>
